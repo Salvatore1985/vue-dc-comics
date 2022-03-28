@@ -6,7 +6,11 @@
       </div>
       <nav>
         <ul class="my-nav-header">
-          <li v-for="(element, index) in navHeder" :key="index">
+          <li
+            v-for="(element, index) in navHeder"
+            :key="index"
+            :class="{ active: element.current }"
+          >
             <a :href="element.url">{{ element.text }}</a>
           </li>
         </ul>
@@ -89,34 +93,20 @@ div.header-content {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  div {
-    border: 1px solid black;
-  }
 }
-/* .active {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 100%;
-  background-color: RGB(2, 130, 249);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-} */
+
 ul.my-nav-header {
   display: flex;
   align-items: center;
   height: 100px;
-  /*  border: 1px solid black; */
 
   li {
     height: 100px;
 
     line-height: 100px;
     list-style-type: none;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
     position: relative;
-    /*  border-bottom: 3px solid RGB(2, 130, 249); */
 
     a {
       text-decoration: none;
