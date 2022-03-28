@@ -102,7 +102,7 @@ export default {
   }
 }
 .main-content-bottom {
-  height: 180px;
+  height: 150px;
   background-color: RGB(2, 130, 249);
   nav {
     display: flex;
@@ -120,8 +120,8 @@ export default {
       }
 
       div {
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
 
         margin-left: 1rem;
 
