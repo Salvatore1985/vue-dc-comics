@@ -1,7 +1,7 @@
 <template>
-  <div class="my-w-80">
+  <div class="my-w-70">
     <div class="header-content">
-      <div>
+      <div id="logo">
         <img src="../assets/img/dc-logo.png" alt="logo" />
       </div>
       <nav>
@@ -83,7 +83,7 @@ export default {
 </script>
 
 <style  lang="scss" scoped>
-div.my-w-80 {
+div.my-w-70 {
   width: 70%;
   margin: 0 auto;
 }
@@ -92,16 +92,15 @@ div.header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
 }
 
-ul.my-nav-header {
+.my-nav-header {
   display: flex;
   align-items: center;
   height: 100px;
 
   li {
-    height: 100px;
+    /* height: 100px; */
 
     line-height: 100px;
     list-style-type: none;
@@ -120,5 +119,8 @@ ul.my-nav-header {
 }
 li:active {
   border-bottom: 3px solid RGB(2, 130, 249);
+}
+#logo img {
+  width: 80%;
 }
 </style>
