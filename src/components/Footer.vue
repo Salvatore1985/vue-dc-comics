@@ -1,76 +1,61 @@
 <template>
   <div>
     <div class="footer-top">
-      <section></section>
-      <section id="position-logo">
-        <img class="logo-footer-dc" src="../assets/img/dc-logo-bg.png" alt="" />
+      <section class="my-container">
+        <FooterTop />
       </section>
     </div>
-    <div class="footer-bottom">
-      <nav class="nav-footer">
-        <section>
-          <div>
-            <button>sign</button>
-          </div>
-        </section>
-        <section>
-          <div>
-            <ul>
-              <li><a href="#"> </a></li>
-            </ul>
-          </div>
-        </section>
-      </nav>
-    </div>
+    <div class="footer-bottom"></div>
   </div>
 </template>
 
 <script>
+import FooterTop from "./FooterTop.vue";
 export default {
   name: "HomeFooter",
+  components: {
+    FooterTop,
+  },
+  data() {
+    return {
+      dcComicsList: [
+        "characters",
+        "comics",
+        "movies",
+        "tv",
+        "games",
+        "videos",
+        "news",
+      ],
+      shopList: ["shop DC", "shop DC collectibles"],
+      dcList: [
+        "terms of use",
+        "privacy policy (new)",
+        "ad choices",
+        "advertising",
+        "jobs",
+        "subscriptions",
+        "talent workshops",
+        "CPSC certificates",
+        "ratings",
+        "shop help",
+        "contact us",
+      ],
+      sitesList: [
+        "dC",
+        "MAD magazine",
+        "dC kids",
+        "dC universe",
+        "dC power visa",
+      ],
+    };
+  },
 };
 </script>
 
 <style  lang="scss" scoped>
 .footer-top {
-  height: 400px;
-  background-image: url("../assets/img/footer-bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url(../assets/img/footer-bg.jpg);
   background-size: cover;
-
-  display: flex;
-  section {
-    width: 50%;
-    height: 100%;
-    border: 1px solid white;
-  }
-}
-
-.footer-bottom {
-  display: block;
-  height: 100px;
-  width: 100%;
-  background-color: RGB(48, 48, 48);
-  display: flex;
-}
-.logo-footer-dc {
-  position: absolute;
-  left: 0px;
-  bottom: -100px;
-}
-#position-logo {
-  position: relative;
-}
-
-.nav-footer {
-  width: 70%;
-  margin: 0 auto;
-  display: flex;
-  section {
-    width: 50%;
-    height: 100%;
-    border: 1px solid white;
-  }
 }
 </style>
