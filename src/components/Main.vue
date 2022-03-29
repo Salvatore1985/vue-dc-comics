@@ -16,7 +16,7 @@
         >
           <div>
             <img
-              src="../assets/img/buy-comics-digital-comics.png"
+              :src="require(`@/assets/img/${element.src}`)"
               :alt="element.text"
             />
           </div>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import Jumbotron from "./components/Jumbotron.vue";
+import Jumbotron from "./Jumbotron.vue";
 export default {
   name: "HomeMain",
   components: {
