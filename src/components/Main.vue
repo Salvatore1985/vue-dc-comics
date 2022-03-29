@@ -1,11 +1,18 @@
 <template>
   <div class="main-container">
     <Jumbotron />
-    <div class="main-content-top">
-      <section>
-        <h5>Content</h5>
-      </section>
-    </div>
+
+    <section class="my-container">
+      <ContentMain
+        v-for="(element, index) in listThumb"
+        :key="index"
+        :CoverThumb="element.thumb"
+        :CoverPrice="element.price"
+        :CoverSeries="element.series"
+        :CoverType="element.type"
+      />
+    </section>
+
     <div class="main-content-bottom">
       <nav>
         <!--         aquisti -->
@@ -29,10 +36,12 @@
 
 <script>
 import Jumbotron from "./Jumbotron.vue";
+import ContentMain from "./ContentMain.vue";
 export default {
   name: "HomeMain",
   components: {
     Jumbotron,
+    ContentMain,
   },
   data: function () {
     return {
@@ -161,20 +170,12 @@ export default {
 
 <style  lang="scss" scoped>
 .main-container {
-  color: RGB(255, 255, 255);
+  background-color: #1c1c1c;
 }
-
-.main-content-top {
-  height: 150px;
-  background-color: RGB(28, 28, 28);
-  section {
-    width: 70%;
-    margin: 0 auto;
-
-    h5 {
-      line-height: 150px;
-    }
-  }
+section.my-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .main-content-bottom {
   height: 150px;

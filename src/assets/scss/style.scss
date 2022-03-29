@@ -1,5 +1,27 @@
+@import './general/_variables.scss';
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.my-container{
+    width: 75%;
+    margin: 0 auto; 
+}
+
+a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .my-p-1{
+      padding: 1rem;
+  }
+
+  .my-p-4{
+    padding: 4rem;
 }
