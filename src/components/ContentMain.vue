@@ -19,19 +19,15 @@ export default {
 
 <style  lang="scss" scoped>
 @import "../assets/scss/style.scss";
-/* div.my-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-} */
+
 div.cover {
   text-transform: uppercase;
   margin-top: 2rem;
   padding: 1rem;
   a {
     img {
-      width: 180px;
-      height: 180px;
+      width: 150px;
+      height: 150px;
       object-fit: cover;
       object-position: top;
     }

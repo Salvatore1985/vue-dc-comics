@@ -12,36 +12,33 @@
         :CoverType="element.type"
       />
     </section>
+    <button>load more</button>
 
-    <div class="main-content-bottom">
+    <section class="my-container-buy">
       <nav>
-        <!--         aquisti -->
-        <section
-          class="nav-buy"
+        <ContentMainBuy
           v-for="(element, index) in navbuyComics"
           :key="index"
-        >
-          <div>
-            <img
-              :src="require(`@/assets/img/${element.src}`)"
-              :alt="element.text"
-            />
-          </div>
-          <a :href="element.url">{{ element.text }}</a>
-        </section>
+          :CoverBuyText="element.text"
+          :CoverBuyUrl="element.url"
+          :CoverBuyCurrent="element.current"
+          :CoverBuySrc="element.src"
+        />
       </nav>
-    </div>
+    </section>
   </div>
 </template>
 
 <script>
 import Jumbotron from "./Jumbotron.vue";
 import ContentMain from "./ContentMain.vue";
+import ContentMainBuy from "./ContentMainBuy.vue";
 export default {
   name: "HomeMain",
   components: {
     Jumbotron,
     ContentMain,
+    ContentMainBuy,
   },
   data: function () {
     return {
@@ -169,49 +166,37 @@ export default {
 </script>
 
 <style  lang="scss" scoped>
+@import "../assets/scss/style.scss";
+
 .main-container {
   background-color: #1c1c1c;
+}
+.my-container-buy {
+  background-color: $brand_primary;
 }
 section.my-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.main-content-bottom {
-  height: 150px;
-  background-color: RGB(2, 130, 249);
+section.my-container-buy {
   nav {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
-    height: 100%;
-    section {
-      display: flex;
-      align-items: center;
-      a {
-        text-decoration: none;
-        color: white;
-      }
-
-      div {
-        width: 80px;
-        height: 80px;
-
-        margin-left: 1rem;
-
-        img {
-          width: 100%;
-          object-fit: contain;
-          max-height: 100%;
-          cursor: pointer;
-        }
-      }
-    }
   }
 }
-.nav-buy {
-  display: flex;
+button {
+  background-color: $brand_primary;
+  color: white;
+  padding: 0.5rem 3rem;
+  border: 0;
+  margin: 1.5rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  cursor: pointer;
 }
 </style>

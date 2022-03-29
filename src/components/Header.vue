@@ -118,7 +118,7 @@ div.header-content {
   }
 }
 li:active {
-  border-bottom: 3px solid RGB(2, 130, 249);
+  border-bottom: 5px solid RGB(2, 130, 249);
 }
 #logo img {
   width: 80%;

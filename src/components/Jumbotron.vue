@@ -14,5 +14,6 @@ div {
   background-color: rgb(73, 136, 190);
   background-image: url("@/assets/img/jumbotron.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>
