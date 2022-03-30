@@ -1,7 +1,7 @@
 <template>
   <div class="main-container">
     <Jumbotron />
-
+    <button id="btn-series">curent series</button>
     <section class="my-container">
       <ContentMain
         v-for="(element, index) in listThumb"
@@ -198,5 +198,13 @@ button {
   left: 50%;
   transform: translate(-50%);
   cursor: pointer;
+}
+
+button#btn-series {
+  font-size: 1rem;
+  text-transform: uppercase;
+  position: relative;
+  left: 20%;
+  top: -40px;
 }
 </style>
