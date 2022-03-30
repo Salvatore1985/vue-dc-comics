@@ -71,7 +71,7 @@ export default {
   background-size: cover;
   height: 500px;
 }
-section.my-container {
+.footer-top section.my-container {
   display: flex;
   justify-content: space-between;
 }
@@ -85,6 +85,7 @@ div#logo {
     object-position: center;
   }
 }
+
 .footer-bottom {
   background-color: $brand_secondary;
 }
