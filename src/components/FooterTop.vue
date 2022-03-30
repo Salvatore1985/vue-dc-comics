@@ -86,6 +86,7 @@ div {
       a {
         text-transform: capitalize;
         color: #747373;
+        font-size: 0.8rem;
       }
     }
   }
